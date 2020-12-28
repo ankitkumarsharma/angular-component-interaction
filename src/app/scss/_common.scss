@@ -1,0 +1,21 @@
+@import './variable';
+
+.ak-title{
+  font-size: 18px;
+  color: $primary_color;
+  font-weight: 500;
+}
+.ak-sub-title{
+  font-size: 16px;
+  color: $tri_color;
+  font-weight: 500;
+}
+.ak-para{
+  font-size: 14px;
+  color: $black_color;
+  opacity: 0.7;
+}
+.ak-title-lg{
+  @extend .ak-title;
+  font-size: 22px;
+}
