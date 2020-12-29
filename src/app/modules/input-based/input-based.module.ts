@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { InputBasedRoutingModule } from './input-based-routing.module';
 import { InputBasedComponent } from './input-based.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
-  declarations: [InputBasedComponent],
+  declarations: [InputBasedComponent, ParentComponent, ChildComponent],
   imports: [
     CommonModule,
-    InputBasedRoutingModule
+    InputBasedRoutingModule,
+    SharedModule
   ]
 })
 export class InputBasedModule { }

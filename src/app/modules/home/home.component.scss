@@ -1,3 +1,9 @@
+@import '../../scss/variable';
 .card{
   cursor: pointer;
+  &.disabled{
+    pointer-events: none;
+    background-color: $white_color;
+    opacity: 0.5;
+  }
 }
