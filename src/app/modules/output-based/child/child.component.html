@@ -1,0 +1,7 @@
+<table class="table">
+  <tr>
+    <td *ngFor="let item of btnArr;let i=index;">
+      <button class="primary-btn" (click)="changeData(item.opt)">{{item.title}}</button>
+    </td>
+  </tr>
+</table>

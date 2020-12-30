@@ -4,7 +4,7 @@
     <h2 class="ak-title text-center">This tutorial is going for <span class="ak-title-lg">Component Interaction</span></h2>
   </div>
 </div>
-<app-contact></app-contact>
+<app-contact [data]="contactData"></app-contact>
 <div class="row">
   <div title="{{item.status ? 'Done':'Pending'}}" *ngFor="let item of componentType" class="col-3">
     <div routerLink="{{item.link}}" class="card" [ngClass]="{'disabled': !item.status }">

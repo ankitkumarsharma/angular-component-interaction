@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { COMPONENT_INTERACTION_TYPE } from './core/home.constant';
+import { COMPONENT_INTERACTION_TYPE, CONTACT_HEADER } from './core/home.constant';
 import { ComponentInteractionTypes } from './core/home.types';
 
 @Component({
@@ -9,6 +9,7 @@ import { ComponentInteractionTypes } from './core/home.types';
 })
 export class HomeComponent implements OnInit {
   public componentType: ComponentInteractionTypes[] = COMPONENT_INTERACTION_TYPE;
+  contactData = CONTACT_HEADER;
   constructor() { }
 
   ngOnInit(): void {

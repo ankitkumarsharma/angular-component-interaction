@@ -30,3 +30,7 @@ export const PARENT_DATA_LIST = [
     "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
   },
 ];
+export const CONTACT_HEADER = {
+  title: 'Angular @Input() Decorator ',
+  subTitle: 'We can communicate via Parent to Child and share the data'
+}

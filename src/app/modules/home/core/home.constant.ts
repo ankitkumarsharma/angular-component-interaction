@@ -9,7 +9,7 @@ export const COMPONENT_INTERACTION_TYPE = [
     name: '@Output',
     info: 'Child to Parent',
     link: '/output-based',
-    status: false
+    status: true
   },
   {
     name: '@ViewChild',
@@ -17,4 +17,9 @@ export const COMPONENT_INTERACTION_TYPE = [
     link: '/',
     status: false
   }
-]
+];
+
+export const CONTACT_HEADER = {
+  title: 'Angular Component Interaction',
+  subTitle: 'We can communicate between components with multiple ways in Angular'
+}

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { InputBasedComponent } from './input-based.component';
 
 const routes: Routes = [{ path: '', component: InputBasedComponent }];
@@ -9,4 +8,5 @@ const routes: Routes = [{ path: '', component: InputBasedComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class InputBasedRoutingModule { }
+export class InputBasedRoutingModule {
+ }
