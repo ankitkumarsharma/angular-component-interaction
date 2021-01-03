@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule) },
   { path: 'input-based', loadChildren: () => import('./modules/input-based/input-based.module').then(m => m.InputBasedModule) },
   { path: 'output-based', loadChildren: () => import('./modules/output-based/output-based.module').then(m => m.OutputBasedModule) },
+  { path: 'view-child-based', loadChildren: () => import('./modules/view-child-based/view-child-based.module').then(m => m.ViewChildBasedModule) },
   { path:'**', component: PageNotFoundComponent }
 ];
 

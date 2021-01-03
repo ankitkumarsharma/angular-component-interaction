@@ -14,6 +14,12 @@ export const COMPONENT_INTERACTION_TYPE = [
   {
     name: '@ViewChild',
     info: 'Parent to Child',
+    link: '/view-child-based',
+    status: true
+  },
+  {
+    name: 'Service - Get/Set',
+    info: 'Service based via getter/setter method',
     link: '/',
     status: false
   }
