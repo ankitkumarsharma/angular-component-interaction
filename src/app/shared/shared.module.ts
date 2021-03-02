@@ -17,13 +17,15 @@ import { AkSearchComponent } from './forms/ak-form-elements/ak-search/ak-search.
 import { AkTextareaComponent } from './forms/ak-form-elements/ak-textarea/ak-textarea.component';
 import { AkPasswordComponent } from './forms/ak-form-elements/ak-password/ak-password.component';
 import { AkErrorComponent } from './ak-error/ak-error.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [PageNotFoundComponent, HeaderComponent, FooterComponent, ContactComponent, AkTitleComponent, AkBodyComponent, AkFormComponent, AkFormElementsComponent, AkTextComponent, AkDateComponent, AkSelectComponent, AkSearchComponent, AkTextareaComponent, AkPasswordComponent, AkErrorComponent],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent, FooterComponent, ContactComponent
