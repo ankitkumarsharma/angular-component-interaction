@@ -29,7 +29,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     FormsModule
   ],
   exports: [
-    HeaderComponent, FooterComponent, ContactComponent
+    HeaderComponent, FooterComponent, ContactComponent, AkTitleComponent, AkBodyComponent, AkFormComponent, AkFormElementsComponent, AkTextComponent, AkDateComponent, AkSelectComponent, AkSearchComponent, AkTextareaComponent, AkPasswordComponent, AkErrorComponent
   ]
 })
 export class SharedModule { }
