@@ -1,1 +1,37 @@
-<p>ak-form-elements works!</p>
+<div [ngSwitch]="config.type">
+  <app-ak-date [readonly]="config?.readOnly" *ngSwitchCase="'password'" [labelName]="config.labelName"
+    [formControl]="control" [errorMessage]="errorMessage" (touchState)="onTouch()"
+    (stateChange)="stateChange.next($event)" [required="required" ]>
+  </app-ak-date>
+
+  <app-ak-date [readonly]="config?.readOnly" *ngSwitchCase="'date'" [labelName]="config.labelName"
+    [formControl]="control" [errorMessage]="errorMessage" (touchState)="onTouch()"
+    (stateChange)="stateChange.next($event)" [required="required" ]>
+  </app-ak-date>
+
+  <app-ak-date [readonly]="config?.readOnly" *ngSwitchCase="'search'" [labelName]="config.labelName"
+    [formControl]="control" [errorMessage]="errorMessage" (touchState)="onTouch()"
+    (stateChange)="stateChange.next($event)" [required="required" ]>
+  </app-ak-date>
+
+  <app-ak-date [readonly]="config?.readOnly" *ngSwitchCase="'text'" [labelName]="config.labelName"
+    [formControl]="control" [errorMessage]="errorMessage" (touchState)="onTouch()"
+    (stateChange)="stateChange.next($event)" [required="required" ]>
+  </app-ak-date>
+
+  <app-ak-date [readonly]="config?.readOnly" *ngSwitchCase="'select'" [labelName]="config.labelName"
+    [formControl]="control" [errorMessage]="errorMessage" (touchState)="onTouch()"
+    (stateChange)="stateChange.next($event)" [required="required" ]>
+  </app-ak-date>
+
+  <app-ak-date [readonly]="config?.readOnly" *ngSwitchCase="'textarea'" [labelName]="config.labelName"
+    [formControl]="control" [errorMessage]="errorMessage" (touchState)="onTouch()"
+    (stateChange)="stateChange.next($event)" [required="required" ]>
+  </app-ak-date>
+
+  <div *ngSwitchCase="'blank'"></div>
+  <app-ak-date [readonly]="config?.readOnly" *ngSwitchCase="'text'"  [labelName]="config.labelName"
+    [formControl]="control" [errorMessage]="errorMessage" (touchState)="onTouch()"
+    (stateChange)="stateChange.next($event)" [required="required" ]>
+  </app-ak-date>
+</div>

@@ -17,7 +17,7 @@ import { AkSearchComponent } from './forms/ak-form-elements/ak-search/ak-search.
 import { AkTextareaComponent } from './forms/ak-form-elements/ak-textarea/ak-textarea.component';
 import { AkPasswordComponent } from './forms/ak-form-elements/ak-password/ak-password.component';
 import { AkErrorComponent } from './ak-error/ak-error.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     SharedRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent, FooterComponent, ContactComponent
