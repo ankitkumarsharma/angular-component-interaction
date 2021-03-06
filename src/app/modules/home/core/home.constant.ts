@@ -22,6 +22,12 @@ export const COMPONENT_INTERACTION_TYPE = [
     info: 'Service based via getter/setter method',
     link: '/service-based',
     status: true
+  },
+  {
+    name: 'Reusable Forms',
+    info: 'How to use genric forms(reusable forms)',
+    link: '/reusable-forms',
+    status: true
   }
 ];
 

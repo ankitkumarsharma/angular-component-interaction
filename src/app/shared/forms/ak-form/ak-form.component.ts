@@ -16,6 +16,13 @@ export class AkFormComponent implements OnInit, AfterViewChecked {
 
   ngOnInit(): void {
     this.formGroup = this._fb.group({});
+    this.formConfig.groups?.forEach((group)=>{
+      if(group.controls){
+        group.controls.forEach((control)=>{
+          this.addControlToFormGroup(control);
+        })
+      }
+    })
     this.formGroupReceiever.emit(this.formGroup);
   }
   addControlToFormGroup(control: AkFormControlModel){

@@ -11,7 +11,7 @@ export const LOGIN_FORM: AkFormModel = {
           labelName: "User Name",
           controlName: "user",
           type: "text",
-          validator: [Validators.required]
+          validator: []
         },
         {
           labelName: "User Password",

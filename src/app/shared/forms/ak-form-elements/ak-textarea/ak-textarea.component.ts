@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
-import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-ak-textarea',
@@ -13,7 +13,7 @@ import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ]
 })
-export class AkTextareaComponent implements OnInit {
+export class AkTextareaComponent implements OnInit, ControlValueAccessor {
   onChange: any = () => { };
   onTouch: any = () => { };
   @Input('value') input!: any;
@@ -50,7 +50,7 @@ export class AkTextareaComponent implements OnInit {
   registerOnChange(value: any): void {
     this.onChange = value;
   }
-  registerOnTouch(value: any): void {
+  registerOnTouched(value: any): void {
     this.onTouch = value;
   }
   updateTouchState() {

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, forwardRef, Input, OnInit, Output, ElementRef } from '@angular/core';
-import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-ak-password',
@@ -13,7 +13,7 @@ import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ]
 })
-export class AkPasswordComponent implements OnInit {
+export class AkPasswordComponent implements OnInit, ControlValueAccessor {
   onChange: any = () => { };
   onTouch: any = () => { };
   @Input('value') input!: any;
@@ -50,7 +50,7 @@ export class AkPasswordComponent implements OnInit {
   registerOnChange(value: any): void {
     this.onChange = value;
   }
-  registerOnTouch(value: any): void {
+  registerOnTouched(value: any): void {
     this.onTouch = value;
   }
   updateTouchState() {

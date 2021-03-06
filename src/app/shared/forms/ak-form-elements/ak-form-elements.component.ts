@@ -1,6 +1,6 @@
 import { AkFormControlModel } from './../ak-form/core/ak-form.types';
 import { Component, ElementRef, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
-import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-ak-form-elements',
@@ -14,7 +14,7 @@ import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ]
 })
-export class AkFormElementsComponent implements OnInit {
+export class AkFormElementsComponent implements OnInit, ControlValueAccessor {
   onChange: any = () => { };
   onTouch: any = () => { };
   @Input('value') input!: any;
@@ -50,7 +50,7 @@ export class AkFormElementsComponent implements OnInit {
   registerOnChange(value: any): void {
     this.onChange = value;
   }
-  registerOnTouch(value: any): void {
+  registerOnTouched(value: any): void {
     this.onTouch = value;
   }
   updateTouchState() {
