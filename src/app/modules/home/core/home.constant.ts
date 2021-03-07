@@ -28,6 +28,12 @@ export const COMPONENT_INTERACTION_TYPE = [
     info: 'How to use genric forms(reusable forms)',
     link: '/reusable-forms',
     status: true
+  },
+  {
+    name: 'Reusable Dialog',
+    info: 'How to use genric dialog(reusable dialog)',
+    link: '/',
+    status: false
   }
 ];
 
