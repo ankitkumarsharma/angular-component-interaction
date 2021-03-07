@@ -32,8 +32,8 @@ export const COMPONENT_INTERACTION_TYPE = [
   {
     name: 'Reusable Dialog',
     info: 'How to use genric dialog(reusable dialog)',
-    link: '/',
-    status: false
+    link: '/reusable-dialog',
+    status: true
   }
 ];
 
