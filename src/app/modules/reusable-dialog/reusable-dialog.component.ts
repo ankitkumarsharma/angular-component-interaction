@@ -31,7 +31,9 @@ export class ReusableDialogComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
-      this.onSubmitDialogOne();
+      if(result){
+        this.onSubmitDialogOne();
+      }
     });
   }
   openDialogTwo() {
@@ -42,7 +44,9 @@ export class ReusableDialogComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
-      this.onSubmitDialogTwo();
+      if(result){
+        this.onSubmitDialogTwo();
+      }
     });
   }
   openFormDialogOne() {
