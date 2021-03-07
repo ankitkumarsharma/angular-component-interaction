@@ -18,15 +18,19 @@ import { AkTextareaComponent } from './forms/ak-form-elements/ak-textarea/ak-tex
 import { AkPasswordComponent } from './forms/ak-form-elements/ak-password/ak-password.component';
 import { AkErrorComponent } from './ak-error/ak-error.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ConfirmDialogComponent } from './dialog/confirm-dialog/confirm-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FormDialogComponent } from './dialog/form-dialog/form-dialog.component';
 
 
 @NgModule({
-  declarations: [PageNotFoundComponent, HeaderComponent, FooterComponent, ContactComponent, AkTitleComponent, AkBodyComponent, AkFormComponent, AkFormElementsComponent, AkTextComponent, AkDateComponent, AkSelectComponent, AkSearchComponent, AkTextareaComponent, AkPasswordComponent, AkErrorComponent],
+  declarations: [PageNotFoundComponent, HeaderComponent, FooterComponent, ContactComponent, AkTitleComponent, AkBodyComponent, AkFormComponent, AkFormElementsComponent, AkTextComponent, AkDateComponent, AkSelectComponent, AkSearchComponent, AkTextareaComponent, AkPasswordComponent, AkErrorComponent, ConfirmDialogComponent, FormDialogComponent],
   imports: [
     CommonModule,
     SharedRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   exports: [
     HeaderComponent, FooterComponent, ContactComponent, AkTitleComponent, AkBodyComponent, AkFormComponent, AkFormElementsComponent, AkTextComponent, AkDateComponent, AkSelectComponent, AkSearchComponent, AkTextareaComponent, AkPasswordComponent, AkErrorComponent

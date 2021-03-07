@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'view-child-based', loadChildren: () => import('./modules/view-child-based/view-child-based.module').then(m => m.ViewChildBasedModule) },
   { path: 'service-based', loadChildren: () => import('./modules/service-get-set-based/service-get-set-based.module').then(m => m.ServiceGetSetBasedModule) },
   { path: 'reusable-forms', loadChildren: () => import('./modules/reusable-forms/reusable-forms.module').then(m => m.ReusableFormsModule) },
+  { path: 'reusable-dialog', loadChildren: () => import('./modules/reusable-dialog/reusable-dialog.module').then(m => m.ReusableDialogModule) },
   { path:'**', component: PageNotFoundComponent }
 ];
 
