@@ -1,3 +1,4 @@
+import { SharedModule } from 'src/app/shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +10,8 @@ import { ReusableFormsComponent } from './reusable-forms.component';
   declarations: [ReusableFormsComponent],
   imports: [
     CommonModule,
-    ReusableFormsRoutingModule
+    ReusableFormsRoutingModule,
+    SharedModule
   ]
 })
 export class ReusableFormsModule { }
