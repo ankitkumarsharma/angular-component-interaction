@@ -1,6 +1,7 @@
+import { FormGroup } from '@angular/forms';
 import { CONTACT_HEADER } from './core/reusable-forms.constant';
 import { Component, OnInit } from '@angular/core';
-import { LOGIN_FORM } from './core/form.config';
+import { LOGIN_FORM, LOGIN_FORM2 } from './core/form.config';
 
 @Component({
   selector: 'app-reusable-forms',
@@ -10,7 +11,9 @@ import { LOGIN_FORM } from './core/form.config';
 export class ReusableFormsComponent implements OnInit {
   contactData = CONTACT_HEADER;
   formConfig = LOGIN_FORM;
-  formData: any;
+  formConfig2 = LOGIN_FORM2;
+  formData!: any;
+  formGroup!: FormGroup;
   constructor() { }
 
   ngOnInit(): void {
@@ -18,7 +21,18 @@ export class ReusableFormsComponent implements OnInit {
   onReceiveFormGroup(e:any){
     this.formData = e;
   }
+  onReceiveFormGroup2(e:any){
+    this.formGroup = e;
+  }
   onSubmit(){
     console.log(this.formData.value)
+  }
+  onSubmitForm(){
+    console.log(this.formGroup)
+    this.formGroup.patchValue({
+      password: "123456",
+      user: "ankit"
+    });
+    console.log(this.formGroup.value)
   }
 }
