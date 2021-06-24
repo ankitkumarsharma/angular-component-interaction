@@ -30,17 +30,17 @@ export class AkSelectComponent implements OnInit, ControlValueAccessor {
   constructor(private eRef: ElementRef) { }
 
   ngOnInit(): void {
-    // if (this.errorMessage) {
-    //   this.error = true;
-    // }
+    if (this.errorMessage) {
+      this.error = true;
+    }
   }
-  // set value(val: any) {
-  //   if(val !== undefined && this.input !== val){
-  //     this.input = val;
-  //     this.onChange(val);
-  //     this.onTouch(val);
-  //   }
-  // }
+  set value(val: any) {
+    if(val !== undefined && this.input !== val){
+      this.input = val;
+      this.onChange(val);
+      this.onTouch(val);
+    }
+  }
   writeValue(input: string) {
     this.input = input;
     this.control = new FormControl(this.input);

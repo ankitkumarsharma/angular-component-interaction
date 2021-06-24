@@ -21,7 +21,7 @@
 
   <app-ak-select [readonly]="config?.readOnly" *ngSwitchCase="'select'" [labelName]="config.labelName"
     [formControl]="control" [errorMessage]="errorMessage" (touchState)="onTouch()"
-    (stateChange)="stateChange.next($event)" [required] ="required">
+    (stateChange)="stateChange.next($event)" [data]="config.dropdownData" [required] ="required">
   </app-ak-select>
 
   <app-ak-textarea [readonly]="config?.readOnly" *ngSwitchCase="'textarea'" [labelName]="config.labelName"

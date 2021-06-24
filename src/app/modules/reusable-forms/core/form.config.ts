@@ -46,3 +46,56 @@ export const LOGIN_FORM2: AkFormModel = {
     }
   ]
 }
+export const CUSTOMER_FORM: AkFormModel = {
+  name: "Customer Form",
+  groups: [
+    {
+      columns: 3,
+      groupName: 'Personal Information',
+      controls: [
+        {
+          labelName: "Name",
+          controlName: "user",
+          type: "text",
+          validator: []
+        },
+        {
+          labelName: "Email Id",
+          controlName: "email",
+          type: "text",
+          validator: []
+        },
+        {
+          labelName: "Gender",
+          controlName: "gender",
+          type: "select", 
+          validator: [],
+          dropdownData: [
+            {name:'Select', value:''},
+            {name:'Male', value:'M'},
+            {name:'Female', value:'F'},
+            {name:'Other', value:'O'},
+          ]
+        },
+        {
+          labelName: "Country",
+          controlName: "country",
+          type: "select", 
+          validator: [],
+          dropdownData: [
+            {name:'Select', value:''},
+            {name:'India', value:'IN'},
+            {name:'Other', value:'OT'}, 
+          ]
+        },
+        {
+          labelName: "Country Name",
+          controlName: "country_other",
+          type: "text",
+          validator: []
+        },
+
+      ]
+    }
+  ]
+}
