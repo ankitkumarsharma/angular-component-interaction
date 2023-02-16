@@ -18,8 +18,8 @@ export const COMPONENT_INTERACTION_TYPE = [
     status: true
   },
   {
-    name: 'Service - Get/Set',
-    info: 'Service based via getter/setter method',
+    name: 'Service - BehaviorSubject',
+    info: 'Getter/setter/ BehaviorSubject method',
     link: '/service-based',
     status: true
   },
