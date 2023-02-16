@@ -15,8 +15,12 @@ export class ChildComponent implements OnInit {
     this.changeValue = this.dataService.getData();
   }
   changeCondition(){
+    // for set/get method
     this.changeValue = !this.changeValue;
     this.dataService.setData(this.changeValue);
+    // for behaviourSubject
+    this.dataService.updateFullname('Ankit Kumar Sharma');
+    // show alert
     alert('Done, Now click on Go to Parent');
   }
 
